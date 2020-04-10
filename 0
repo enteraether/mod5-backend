@@ -1,0 +1,2 @@
+      invoke  active_record
+      remove    db/migrate/20200409161654_add_counter_to_goals.rb
