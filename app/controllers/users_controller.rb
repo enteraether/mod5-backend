@@ -5,12 +5,12 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users, include: {goals: {include: :comments}}
+    render json: @users, include: "goals.comments"
   end
 
   # GET /users/1
   def show
-    render json: @user, include: {goals: {include: :comments}}
+    render json: @user, include: "goals.comments"
   end
 
   # POST /users
