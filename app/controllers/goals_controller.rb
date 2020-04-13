@@ -28,14 +28,15 @@ class GoalsController < ApplicationController
   def update
     # render json: @goal 
     
-    if @goal.update(update_params)
+    # if @goal.update(update_params)
       # byebug
       @goal.counter += 1
       @goal.save
+    # byebug
       render json: @goal
-    else
-      render json: @goal.errors, status: :unprocessable_entity
-    end
+    # else
+    #   render json: @goal.errors, status: :unprocessable_entity
+    # end
   end
 
   # DELETE /goals/1
